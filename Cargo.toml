@@ -1,0 +1,14 @@
+[package]
+name        = "game-of-life-fs"
+version     = "0.1.0"
+authors     = ["Dmytro Meleshko <dmytro.meleshko@gmail.com>"]
+description = "Conway's Game of Life but it uses filenames for rendering"
+license     = "MIT"
+repository  = "https://github.com/dmitmel/game-of-life-fs.git"
+homepage    = "https://github.com/dmitmel/game-of-life-fs"
+readme      = "README.md"
+
+[dependencies]
+bit-vec = "0.5"
+rand    = "0.5"
+clap    = "2.0"

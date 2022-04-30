@@ -1,0 +1,38 @@
+name: CI
+on: [push, pull_request, workflow_dispatch]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions-rs/toolchain@v1
+        id: install_rust
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+          default: true
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: |
+            r1/${{ github.workflow }}/${{ runner.os }}/rust/${{ steps.install_rust.outputs.rustc_hash }}/${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            r1/${{ github.workflow }}/${{ runner.os }}/rust/${{ steps.install_rust.outputs.rustc_hash }}/
+            r1/${{ github.workflow }}/${{ runner.os }}/rust/
+
+      - run: cargo check --verbose --workspace --all-targets
+      - run: cargo build --verbose
+      - run: cargo test --verbose --workspace
+      - run: cargo fmt --verbose --all -- --check
+      - run: cargo clippy --verbose --workspace

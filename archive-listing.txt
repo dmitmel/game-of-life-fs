@@ -1,0 +1,16 @@
+drwxr-xr-x dmitmel/staff     0 2018-09-08 14:53 game-of-life-fs/
+-rw-r--r-- dmitmel/staff   432 2018-08-20 00:39 game-of-life-fs/Cargo.toml
+-rw-r--r-- dmitmel/staff    31 2018-08-16 19:09 game-of-life-fs/rustfmt.toml
+-rw-r--r-- dmitmel/staff  1072 2018-08-16 19:09 game-of-life-fs/LICENSE
+-rw-r--r-- dmitmel/staff  8179 2018-08-19 23:33 game-of-life-fs/Cargo.lock
+-rw-r--r-- dmitmel/staff  1222 2018-08-24 10:31 game-of-life-fs/README.md
+drwxr-xr-x dmitmel/staff     0 2019-03-08 01:25 game-of-life-fs/screencast/
+-rw-r--r-- dmitmel/staff    31 2018-08-24 10:30 game-of-life-fs/.gitignore
+drwxr-xr-x dmitmel/staff     0 2018-08-21 12:13 game-of-life-fs/.vscode/
+drwxr-xr-x dmitmel/staff     0 2018-08-20 01:07 game-of-life-fs/src/
+-rw-r--r-- dmitmel/staff  2518 2018-08-21 11:32 game-of-life-fs/src/world.rs
+-rw-r--r-- dmitmel/staff  4105 2018-08-21 12:26 game-of-life-fs/src/main.rs
+-rw-r--r-- dmitmel/staff   300 2018-08-17 23:22 game-of-life-fs/src/utils.rs
+-rw-r--r-- dmitmel/staff  1899 2018-08-20 13:12 game-of-life-fs/src/cli.rs
+-rw-r--r-- dmitmel/staff   381 2018-08-21 12:13 game-of-life-fs/.vscode/tags
+-rw-r--r-- dmitmel/staff 230552 2018-08-24 10:05 game-of-life-fs/screencast/screen.mp4
