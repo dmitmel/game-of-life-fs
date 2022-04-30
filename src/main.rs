@@ -133,7 +133,8 @@ fn create_row_files(dir: &Path, world: &World) -> io::Result<Vec<PathBuf>> {
       File::create(&file_path)
         .map(|_| file_path)
         .context(&format!("couldn't create file for row {}", row))
-    }).collect::<io::Result<Vec<PathBuf>>>()
+    })
+    .collect::<io::Result<Vec<PathBuf>>>()
 }
 
 pub fn rename_row_files(
@@ -151,7 +152,8 @@ pub fn rename_row_files(
       fs::rename(current_file, &new_file)
         .context(&format!("couldn't rename file for row {}", row))
         .map(|_| new_file)
-    }).collect()
+    })
+    .collect()
 }
 
 pub fn remove_row_files(dir: &Path, files: &[PathBuf]) -> io::Result<()> {

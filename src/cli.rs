@@ -40,15 +40,18 @@ fn create_app<'a, 'b>() -> clap::App<'a, 'b> {
       clap::Arg::with_name(DIR_ARG)
         .help("a directory for the rendered world")
         .required(true),
-    ).arg(
+    )
+    .arg(
       clap::Arg::with_name(WIDTH_ARG)
         .help("world width")
         .required(true),
-    ).arg(
+    )
+    .arg(
       clap::Arg::with_name(HEIGHT_ARG)
         .help("world height")
         .required(true),
-    ).arg(
+    )
+    .arg(
       clap::Arg::with_name(PROBABILITY_ARG)
         .long("random")
         .short("r")
@@ -56,7 +59,8 @@ fn create_app<'a, 'b>() -> clap::App<'a, 'b> {
         .help(
           "Before the simulation begins, the world is filled randomly with \
            alive cells. This option sets the chance of a cell being filled.",
-        ).default_value("0.2")
+        )
+        .default_value("0.2")
         .takes_value(true),
     )
 }
